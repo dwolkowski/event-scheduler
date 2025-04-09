@@ -18,6 +18,7 @@ function EventPage() {
         const responseData = await response.json();
         console.log(responseData);
 
+        router.push("/");
     }
 
     return (
