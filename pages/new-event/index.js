@@ -1,4 +1,5 @@
 import { useRouter } from "next/router";
+import Head from "next/head";
 import NewEventForm from "../../components/events/NewEventForm";
 
 
@@ -22,7 +23,13 @@ function EventPage() {
     }
 
     return (
-        <NewEventForm onAddEvent={addEventHandler} />
+        <>
+            <Head>
+                <title>Schedule a New Event</title>
+                <meta name="description" content="Schedule your new events on this page!" />
+            </Head>
+            <NewEventForm onAddEvent={addEventHandler} />
+        </>
     );
 }
 

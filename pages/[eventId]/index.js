@@ -1,15 +1,23 @@
 import EventDetail from "../../components/events/EventDetail";
 import { ObjectId } from "mongodb";
+import Head from "next/head";
 import connectDb from "../../utils/connect-mdb";
 
 function EventDetails(props) {
     return (
-        <EventDetail
-            image={props.eventDetail.image}
-            title={props.eventDetail.title}
-            address={props.eventDetail.address}
-            description={props.eventDetail.description}
-        />
+        <>
+            <Head>
+                <title>{props.eventDetail.title}</title>
+                <meta name="description" content={props.eventDetail.description} />
+            </Head>
+
+            <EventDetail
+                image={props.eventDetail.image}
+                title={props.eventDetail.title}
+                address={props.eventDetail.address}
+                description={props.eventDetail.description}
+            />
+        </>
     );
 }
 
