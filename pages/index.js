@@ -24,10 +24,21 @@ const DUMMY_EVENTS = [
     }
 ];
 
-function HomePage() {
+function HomePage(props) {
     return (
-        <EventList events={DUMMY_EVENTS} />
+        <EventList events={props.events} />
     );
+}
+
+// Pregenerating data for EventList every 10 seconds.
+export async function getStaticProps() {
+    // fetching data from database
+    return {
+        props: {
+            events: DUMMY_EVENTS
+        },
+        revalidate: 10
+    };
 }
 
 export default HomePage;
