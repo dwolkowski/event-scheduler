@@ -1,7 +1,9 @@
 import EventDetail from "../../components/events/EventDetail";
+import CommentSection from "../../components/comments/CommentSection"
 import { ObjectId } from "mongodb";
 import Head from "next/head";
 import connectDb from "../../utils/connect-mdb";
+import Post from "../../components/comments/Comment";
 
 function EventDetails(props) {
     return (
@@ -17,6 +19,8 @@ function EventDetails(props) {
                 address={props.eventDetail.address}
                 description={props.eventDetail.description}
             />
+
+            <CommentSection />
         </>
     );
 }

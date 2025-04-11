@@ -1,0 +1,15 @@
+.post{
+    border-radius: 15px;
+    background-color: #A35C7A;
+    margin: 3rem 0;
+    padding: 10px;
+    color: #f8f8f8;
+}
+
+.post h2{
+    font-weight: bold;
+}
+
+.post p{
+    font-style: italic;
+}
