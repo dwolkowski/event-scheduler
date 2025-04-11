@@ -6,7 +6,7 @@ function HomePage(props) {
     return (
         <>
             <Head>
-                <title>Event Scheduler</title>
+                <title>Eventify</title>
                 <meta name="description" content="Schedule your upcoming events." />
             </Head>
             <EventList events={props.events} />

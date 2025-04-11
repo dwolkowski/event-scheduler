@@ -5,7 +5,7 @@ function MainNavigation() {
 
   return (
     <header className={classes.header}>
-      <div className={classes.logo}>Event Scheduler</div>
+      <div className={classes.logo}>Eventify</div>
       <nav>
         <ul>
           <li>
